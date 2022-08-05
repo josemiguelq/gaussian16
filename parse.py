@@ -6,7 +6,7 @@ with open('triazol-Cu-opt.log', 'r') as f:
     atoms = {"29": "Cu", "8" : "O", "7" : "N", "6":"C", "1": "H", "17" : "Cl"}
     m = mmap.mmap(f.fileno(), 0, prot=mmap.PROT_READ)  
     
-    f = open("demo.xyz", "a") 
+    f = open("coordinates_input.xyz", "a") 
     i = m.rfind(b'Number     Number       Type             X           Y           Z')
     m.seek(i)
     line = m.readline()
